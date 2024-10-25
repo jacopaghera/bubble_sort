@@ -3,10 +3,10 @@ require 'pry-byebug'
 
 
 def bubble_sort(array)
-  last_number = 0
-  last_index = 0
   flag = 0
-  #while flag == (array.length - 1) #iterations for the number of numbers in the array -1
+  while flag < array.length - 1 #iterations for the number of numbers in the array -1
+    last_number = 0
+    last_index = 0
     array.each_with_index do |n, idx| #iteration
         p last_number
         if n < last_number
@@ -16,10 +16,10 @@ def bubble_sort(array)
         last_index = idx
         p last_number
       end
-    #flag += 1 #augment flag until one before the end
-    #p flag
-  #end
+    flag += 1 #augment flag until one before the end
+    p flag
+  end
   p array
 end
 
-bubble_sort([1, 2, 5, 4, 3])
+bubble_sort([7, 2, 5, 9, 3, 10, 15, 14])
